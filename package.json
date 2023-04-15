@@ -4,6 +4,9 @@
   "description": "API com Node.js e Express para clínica La Vie - Saúde Mental que oferece diversos tipos de terapia.",
   "main": "src/server.js",
   "type": "module",
+  "engine": {
+    "node": "18"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
