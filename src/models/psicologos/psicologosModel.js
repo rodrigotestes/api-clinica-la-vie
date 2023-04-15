@@ -6,7 +6,7 @@ const psicologo = db.define(
     'psicologo',
     {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,

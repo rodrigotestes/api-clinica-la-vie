@@ -7,7 +7,7 @@ const atendimento = db.define(
     'atendimento',
     {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,
@@ -45,7 +45,7 @@ const atendimento = db.define(
             },
         },
         psicologo_id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             references: {
                 model: Psicologos,
                 key: 'id',
@@ -53,7 +53,7 @@ const atendimento = db.define(
             allowNull: false,
         },
         paciente_id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             references: {
                 model: Pacientes,
                 key: 'id',

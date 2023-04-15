@@ -7,7 +7,7 @@ module.exports = {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
-                type: Sequelize.INTEGER.UNSIGNED,
+                type: Sequelize.INTEGER,
             },
             data_atendimento: {
                 allowNull: false,
@@ -18,7 +18,7 @@ module.exports = {
                 type: Sequelize.TEXT,
             },
             psicologo_id: {
-                type: Sequelize.INTEGER.UNSIGNED,
+                type: Sequelize.INTEGER,
                 references: {
                     model: 'psicologos',
                     key: 'id',
@@ -26,7 +26,7 @@ module.exports = {
                 },
             },
             paciente_id: {
-                type: Sequelize.INTEGER.UNSIGNED,
+                type: Sequelize.INTEGER,
                 references: {
                     model: 'pacientes',
                     key: 'id',

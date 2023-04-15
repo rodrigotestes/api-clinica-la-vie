@@ -6,7 +6,7 @@ const paciente = db.define(
     'paciente',
     {
         id: {
-            type: Sequelize.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,
@@ -66,7 +66,9 @@ const paciente = db.define(
                 },
             },
             get: function () {
-                return moment(this.getDataValue('data_nascimento')).format('DD/MM/YYYY');
+                return moment(this.getDataValue('data_nascimento')).format(
+                    'DD/MM/YYYY'
+                );
             },
         },
     },
