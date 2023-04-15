@@ -16,7 +16,7 @@ const sequelize = new Sequelize(dbURL, {
     protocol: process.env.DB_DIALECT,
     dialectOptions: {
         ssl: true,
-        native: true,
+        rejectUnauthorized: false,
     },
 });
 
